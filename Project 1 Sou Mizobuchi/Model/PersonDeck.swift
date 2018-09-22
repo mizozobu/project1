@@ -9,8 +9,8 @@
 import Foundation
 
 class PersonDeck {
-    // Mark - Properties
-    let people = (
+    // Mark - static data
+    static let people = [
         Person(
             firstName: "Chewbacca",
             lastName: "Wookiee",
@@ -23,7 +23,7 @@ class PersonDeck {
             yearJoined: "1984",
             address: "125 Sailing Along Now",
             status: "Gold"
-            ),
+        ),
         Person(
             firstName: "Leia",
             lastName: "Princess",
@@ -36,7 +36,7 @@ class PersonDeck {
             yearJoined: "1984",
             address: "125 Sailing Along Now",
             status: "Platinum"
-            ),
+        ),
         Person(
             firstName: "Han",
             lastName: "Solo",
@@ -49,7 +49,7 @@ class PersonDeck {
             yearJoined: "1984",
             address: "125 Sailing Along Now",
             status: "Silver"
-            ),
+        ),
         Person(
             firstName: "Luke",
             lastName: "Skywalker",
@@ -62,6 +62,6 @@ class PersonDeck {
             yearJoined: "1984",
             address: "125 Sailing Along Now",
             status: "Bronze"
-            )
-    )
+        )
+    ]
 }
