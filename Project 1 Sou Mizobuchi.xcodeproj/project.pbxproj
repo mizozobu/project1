@@ -12,6 +12,8 @@
 		696333902155A03700C7EFF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6963338E2155A03700C7EFF2 /* Main.storyboard */; };
 		696333922155A03800C7EFF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 696333912155A03800C7EFF2 /* Assets.xcassets */; };
 		696333952155A03800C7EFF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696333932155A03800C7EFF2 /* LaunchScreen.storyboard */; };
+		696333A32155A69200C7EFF2 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696333A22155A69200C7EFF2 /* Person.swift */; };
+		696333A52155AA4900C7EFF2 /* PersonDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696333A42155AA4900C7EFF2 /* PersonDeck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		696333912155A03800C7EFF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		696333942155A03800C7EFF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		696333962155A03800C7EFF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		696333A22155A69200C7EFF2 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		696333A42155AA4900C7EFF2 /* PersonDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDeck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,40 @@
 		696333892155A03700C7EFF2 /* Project 1 Sou Mizobuchi */ = {
 			isa = PBXGroup;
 			children = (
+				696333A12155A0D500C7EFF2 /* Controller */,
+				696333A02155A0CF00C7EFF2 /* View */,
+				6963339F2155A0BD00C7EFF2 /* Model */,
 				6963338A2155A03700C7EFF2 /* AppDelegate.swift */,
-				6963338C2155A03700C7EFF2 /* ViewController.swift */,
-				6963338E2155A03700C7EFF2 /* Main.storyboard */,
 				696333912155A03800C7EFF2 /* Assets.xcassets */,
 				696333932155A03800C7EFF2 /* LaunchScreen.storyboard */,
 				696333962155A03800C7EFF2 /* Info.plist */,
 			);
 			path = "Project 1 Sou Mizobuchi";
+			sourceTree = "<group>";
+		};
+		6963339F2155A0BD00C7EFF2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				696333A22155A69200C7EFF2 /* Person.swift */,
+				696333A42155AA4900C7EFF2 /* PersonDeck.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		696333A02155A0CF00C7EFF2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6963338E2155A03700C7EFF2 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		696333A12155A0D500C7EFF2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6963338C2155A03700C7EFF2 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +165,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				696333A32155A69200C7EFF2 /* Person.swift in Sources */,
+				696333A52155AA4900C7EFF2 /* PersonDeck.swift in Sources */,
 				6963338D2155A03700C7EFF2 /* ViewController.swift in Sources */,
 				6963338B2155A03700C7EFF2 /* AppDelegate.swift in Sources */,
 			);
@@ -283,6 +315,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Project 1 Sou Mizobuchi/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +333,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Project 1 Sou Mizobuchi/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
