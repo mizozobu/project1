@@ -33,8 +33,10 @@ class ContactsViewController: UITableViewController {
     
     // Mark - life cycle
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let detailViewController = segue.destination as? DetailViewController {
-            detailViewController.uid = selectedContactEmail
+        if let navController = segue.destination as? UINavigationController {
+            if let detailViewController = navController.viewControllers.first as? DetailViewController {
+                detailViewController.uid = selectedContactEmail
+            }
         }
     }
     
