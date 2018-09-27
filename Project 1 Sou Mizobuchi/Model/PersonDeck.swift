@@ -44,7 +44,7 @@ class PersonDeck {
             email: "han@gmail.com",
             company: "",
             profileImageName: "founder3.png",
-            preferredName: "Chewie",
+            preferredName: "Han",
             businessProfile: "",
             yearJoined: "1984",
             address: "125 Sailing Along Now",

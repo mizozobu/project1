@@ -67,7 +67,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="35O-RP-25e">
-                                <rect key="frame" x="16" y="239" width="343" height="163"/>
+                                <rect key="frame" x="16" y="239" width="343" height="277"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtL-2I-LP3">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
@@ -99,8 +99,32 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhN-qJ-OTh">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbg-jd-YO2">
                                         <rect key="frame" x="0.0" y="142.5" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzF-9m-A0g">
+                                        <rect key="frame" x="0.0" y="171" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ch4-gl-pxE">
+                                        <rect key="frame" x="0.0" y="199.5" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YhB-Ej-i6d">
+                                        <rect key="frame" x="0.0" y="228" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhN-qJ-OTh">
+                                        <rect key="frame" x="0.0" y="256.5" width="343" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -125,15 +149,25 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TuJ-l0-QoO"/>
                     </view>
-                    <navigationItem key="navigationItem" id="upc-M4-utl"/>
+                    <navigationItem key="navigationItem" id="upc-M4-utl">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="kiJ-E2-kAH">
+                            <connections>
+                                <segue destination="H2f-hA-j1p" kind="show" id="gSg-HY-puI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="company" destination="itb-Ds-POn" id="NAG-vc-Oop"/>
                         <outlet property="email" destination="Jyb-e8-6P8" id="YUE-Us-thg"/>
+                        <outlet property="homeContact" destination="Ch4-gl-pxE" id="z5Z-MZ-QaO"/>
                         <outlet property="image" destination="c0t-29-6Z7" id="fCF-jD-H7q"/>
                         <outlet property="name" destination="gtL-2I-LP3" id="Nfj-wo-maL"/>
                         <outlet property="phone" destination="2jv-QX-Vmk" id="uyb-EW-4du"/>
                         <outlet property="profile" destination="rhN-qJ-OTh" id="Sml-Dt-GWl"/>
                         <outlet property="spouse" destination="igj-nr-za3" id="AIU-85-VIa"/>
+                        <outlet property="status" destination="lzF-9m-A0g" id="ZzH-SE-j6B"/>
+                        <outlet property="workContact" destination="YhB-Ej-i6d" id="otz-33-SrX"/>
+                        <outlet property="yearJoined" destination="fbg-jd-YO2" id="LmU-h0-wbk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u3w-uu-avc" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -17,18 +17,29 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var company: UILabel!
     @IBOutlet weak var spouse: UILabel!
     @IBOutlet weak var profile: UILabel!
+    @IBOutlet weak var yearJoined: UILabel!
+    @IBOutlet weak var status: UILabel!
+    @IBOutlet weak var homeContact: UILabel!
+    @IBOutlet weak var workContact: UILabel!
     
     // Mark - Properties
     var uid: String?
+    var currentPerson: Person?
     
     // Mark - Life Cycle
     override func viewDidLoad() {
+        super.viewDidLoad()
+        findPerson()
+        self.title = currentPerson!.getFullName()
         updateUI()
     }
     
     // Mark - Helper
+    private func findPerson() {
+        currentPerson = PersonDeck.people.first(where: { $0.email == uid })
+    }
+    
     private func updateUI() {
-        let currentPerson = PersonDeck.people.first(where: { $0.email == uid })
         image.image = UIImage(named: currentPerson!.profileImageName)
         name.text = currentPerson!.getFullName()
         phone.text = currentPerson!.phone
@@ -36,6 +47,13 @@ class DetailViewController: UIViewController {
         company.text = currentPerson!.company
         spouse.text = currentPerson!.getSpouseFullName()
         profile.text = currentPerson!.businessProfile
+        yearJoined.text = currentPerson!.yearJoined
+        status.text = currentPerson!.status
+        homeContact.text = currentPerson!.homeContact
+        workContact.text = currentPerson!.workContact
+        
+        profile.contentMode = .scaleToFill
+        profile.numberOfLines = 0
     }
     
     // Mark - Segue
