@@ -30,6 +30,7 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         findPerson()
+        enableEdit()
         self.title = currentPerson!.getFullName()
         updateUI()
     }
@@ -37,6 +38,20 @@ class DetailViewController: UIViewController {
     // Mark - Helper
     private func findPerson() {
         currentPerson = PersonDeck.people.first(where: { $0.email == uid })
+    }
+    
+    private func enableEdit() {
+        if uid == "chewie@gmail.com" {
+            let editBtn = UIButton(type: .custom)
+            //editBtn.setImage(UIImage(named: "founder1.png"), for: .normal)
+            editBtn.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+            //editBtn.addTarget(self, action: #selector(Class.Methodname), for: .touchUpInside)
+            editBtn.setTitle("Edit", for: [])
+            let item1 = UIBarButtonItem(customView: editBtn)
+            item1.title = "Edit"
+            
+            self.navigationItem.setRightBarButtonItems([item1], animated: false)
+        }
     }
     
     private func updateUI() {
