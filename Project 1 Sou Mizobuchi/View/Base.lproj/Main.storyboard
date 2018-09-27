@@ -60,9 +60,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="wfh-bZ-kTR" kind="show" identifier="ShowDetail" id="C1g-MO-Cr0"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -72,11 +69,10 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="ade-TL-yoZ"/>
                     <connections>
-                        <segue destination="WSL-f8-YxX" kind="unwind" identifier="showDetail" unwindAction="showContactDetail:" id="Cjj-cS-uea"/>
+                        <segue destination="ksj-uM-Q7q" kind="showDetail" identifier="ShowDetail" id="XdS-YC-9sx"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kK6-Yc-MtQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="WSL-f8-YxX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4201" y="-1245"/>
         </scene>
@@ -88,8 +84,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jyb-e8-6P8">
-                                <rect key="frame" x="166" y="146" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jyb-e8-6P8">
+                                <rect key="frame" x="61" y="167" width="254" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -106,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u3w-uu-avc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5738" y="-1245"/>
+            <point key="canvasLocation" x="5080.8000000000002" y="-1245.4272863568217"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="drG-kg-LOa">
@@ -143,24 +139,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EXw-c0-fvs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3362" y="-1245"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="gUw-Fw-C9l">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wfh-bZ-kTR" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VaK-HD-GFQ">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="ksj-uM-Q7q" kind="relationship" relationship="rootViewController" id="4Jf-45-BOI"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CIt-yd-EYl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4969" y="-1245"/>
         </scene>
     </scenes>
 </document>
