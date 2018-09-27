@@ -47,4 +47,16 @@ class Person {
         self.address = address
         self.status = status
     }
+    
+    // Mark - Instant Method
+    func getFullName() -> String {
+        return "\(self.firstName) \(self.lastName)"
+    }
+    
+    func getSpouseFullName() -> String {
+        if let sf = self.spouseFirstName, let sl = self.spouseLastName {
+            return "\(sf) \(sl)"
+        }
+        return ""
+    }
 }

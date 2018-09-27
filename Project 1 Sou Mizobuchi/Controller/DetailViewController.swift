@@ -30,11 +30,11 @@ class DetailViewController: UIViewController {
     private func updateUI() {
         let currentPerson = PersonDeck.people.first(where: { $0.email == uid })
         image.image = UIImage(named: currentPerson!.profileImageName)
-        name.text = "\(currentPerson!.firstName) \(currentPerson!.lastName)"
+        name.text = currentPerson!.getFullName()
         phone.text = currentPerson!.phone
         email.text = currentPerson!.email
         company.text = currentPerson!.company
-        spouse.text = "\(currentPerson!.spouseFirstName ?? "") \(currentPerson!.spouseLastName ?? "")"
+        spouse.text = currentPerson!.getSpouseFullName()
         profile.text = currentPerson!.businessProfile
     }
     

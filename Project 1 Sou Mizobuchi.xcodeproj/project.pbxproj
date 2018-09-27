@@ -34,10 +34,10 @@
 		696333A22155A69200C7EFF2 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		696333A42155AA4900C7EFF2 /* PersonDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDeck.swift; sourceTree = "<group>"; };
 		696D8C462156BF6700852CD1 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
-		6989F864215C6B8800C67902 /* founder1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = founder1.png; path = Asset/founder1.png; sourceTree = "<group>"; };
-		6989F865215C6B8800C67902 /* founder3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = founder3.png; path = Asset/founder3.png; sourceTree = "<group>"; };
-		6989F866215C6B8800C67902 /* founder4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = founder4.png; path = Asset/founder4.png; sourceTree = "<group>"; };
-		6989F867215C6B8800C67902 /* founder2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = founder2.png; path = Asset/founder2.png; sourceTree = "<group>"; };
+		6989F864215C6B8800C67902 /* founder1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = founder1.png; sourceTree = "<group>"; };
+		6989F865215C6B8800C67902 /* founder3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = founder3.png; sourceTree = "<group>"; };
+		6989F866215C6B8800C67902 /* founder4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = founder4.png; sourceTree = "<group>"; };
+		6989F867215C6B8800C67902 /* founder2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = founder2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,10 +71,6 @@
 			isa = PBXGroup;
 			children = (
 				6989F863215C6A3B00C67902 /* Asset */,
-				6989F864215C6B8800C67902 /* founder1.png */,
-				6989F867215C6B8800C67902 /* founder2.png */,
-				6989F865215C6B8800C67902 /* founder3.png */,
-				6989F866215C6B8800C67902 /* founder4.png */,
 				696333A12155A0D500C7EFF2 /* Controller */,
 				696333A02155A0CF00C7EFF2 /* View */,
 				6963339F2155A0BD00C7EFF2 /* Model */,
@@ -116,6 +112,10 @@
 		6989F863215C6A3B00C67902 /* Asset */ = {
 			isa = PBXGroup;
 			children = (
+				6989F864215C6B8800C67902 /* founder1.png */,
+				6989F867215C6B8800C67902 /* founder2.png */,
+				6989F865215C6B8800C67902 /* founder3.png */,
+				6989F866215C6B8800C67902 /* founder4.png */,
 			);
 			path = Asset;
 			sourceTree = "<group>";
