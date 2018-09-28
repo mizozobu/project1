@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class DetailViewController: UIViewController {
     // Mark - Outlets
@@ -35,6 +36,13 @@ class DetailViewController: UIViewController {
         if let email = URL(string: "mailto:\(currentPerson!.email)") {
             UIApplication.shared.open(email)
         }
+    }
+    
+    @IBAction func writeText(_ sender: Any) {
+        let composeVC = MFMessageComposeViewController()
+        //composeVC.messageComposeDelegate = self
+        composeVC.recipients = [currentPerson!.phone]
+        composeVC.present(composeVC, animated: true, completion: nil)
     }
     
     // Mark - Properties
