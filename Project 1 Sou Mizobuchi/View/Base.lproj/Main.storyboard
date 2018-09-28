@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Contacts View Controller-->
+        <!--Contacts-->
         <scene sceneID="Aml-GL-xgE">
             <objects>
                 <tableViewController id="CxI-25-SdC" customClass="ContactsViewController" customModule="Project_1_Sou_Mizobuchi" customModuleProvider="target" sceneMemberID="viewController">
@@ -42,7 +42,7 @@
                             <outlet property="delegate" destination="CxI-25-SdC" id="2f0-hC-eNP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="ade-TL-yoZ"/>
+                    <navigationItem key="navigationItem" title="Contacts" id="ade-TL-yoZ"/>
                     <connections>
                         <segue destination="220-jg-B7h" kind="showDetail" identifier="ShowDetail" id="XdS-YC-9sx"/>
                     </connections>
@@ -62,12 +62,30 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c0t-29-6Z7">
                                 <rect key="frame" x="123.5" y="84" width="128" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="128" id="VkH-Fn-IMz"/>
-                                    <constraint firstAttribute="height" constant="128" id="d5e-CS-Wty"/>
+                                    <constraint firstAttribute="width" secondItem="c0t-29-6Z7" secondAttribute="height" multiplier="1:1" id="MfJ-OD-hQo"/>
                                 </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IIv-IB-f43">
+                                <rect key="frame" x="16" y="228" width="343" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ajy-mx-pIm">
+                                        <rect key="frame" x="0.0" y="0.0" width="171.5" height="30"/>
+                                        <state key="normal" title="Call"/>
+                                        <connections>
+                                            <action selector="makeCall:" destination="ksj-uM-Q7q" eventType="touchUpInside" id="NDR-R7-9Ec"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ql-vR-CzB">
+                                        <rect key="frame" x="171.5" y="0.0" width="171.5" height="30"/>
+                                        <state key="normal" title="Email"/>
+                                        <connections>
+                                            <action selector="writeEmail:" destination="ksj-uM-Q7q" eventType="touchUpInside" id="FQx-M6-sri"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="35O-RP-25e">
-                                <rect key="frame" x="16" y="239" width="343" height="277"/>
+                                <rect key="frame" x="16" y="272" width="343" height="277"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtL-2I-LP3">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
@@ -130,22 +148,20 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Jyb-e8-6P8" secondAttribute="trailing" id="BLX-VC-K5x"/>
-                                    <constraint firstAttribute="trailing" secondItem="gtL-2I-LP3" secondAttribute="trailing" id="IIZ-mT-JN9"/>
-                                    <constraint firstItem="Jyb-e8-6P8" firstAttribute="leading" secondItem="35O-RP-25e" secondAttribute="leading" id="brT-Gl-RJc"/>
-                                    <constraint firstItem="gtL-2I-LP3" firstAttribute="leading" secondItem="35O-RP-25e" secondAttribute="leading" id="mEl-g1-zAh"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="c0t-29-6Z7" firstAttribute="centerX" secondItem="TuJ-l0-QoO" secondAttribute="centerX" id="GD7-5i-b4I"/>
-                            <constraint firstItem="35O-RP-25e" firstAttribute="top" secondItem="c0t-29-6Z7" secondAttribute="bottom" constant="27" id="WNE-sP-VVP"/>
-                            <constraint firstItem="TuJ-l0-QoO" firstAttribute="trailing" secondItem="35O-RP-25e" secondAttribute="trailing" constant="16" id="XMy-A6-Xmk"/>
-                            <constraint firstItem="35O-RP-25e" firstAttribute="centerX" secondItem="TuJ-l0-QoO" secondAttribute="centerX" id="cuN-cE-h2H"/>
-                            <constraint firstItem="35O-RP-25e" firstAttribute="leading" secondItem="TuJ-l0-QoO" secondAttribute="leading" constant="16" id="mA2-j3-fxM"/>
-                            <constraint firstItem="c0t-29-6Z7" firstAttribute="top" secondItem="TuJ-l0-QoO" secondAttribute="top" constant="20" id="vDs-Ex-PPl"/>
+                            <constraint firstItem="c0t-29-6Z7" firstAttribute="leading" secondItem="TuJ-l0-QoO" secondAttribute="leading" constant="123.5" id="5fC-p7-uvP"/>
+                            <constraint firstItem="35O-RP-25e" firstAttribute="top" secondItem="IIv-IB-f43" secondAttribute="bottom" constant="14" id="CW7-WT-O8i"/>
+                            <constraint firstItem="c0t-29-6Z7" firstAttribute="top" secondItem="TuJ-l0-QoO" secondAttribute="top" constant="20" id="UAX-KS-Dzf"/>
+                            <constraint firstItem="IIv-IB-f43" firstAttribute="leading" secondItem="TuJ-l0-QoO" secondAttribute="leading" constant="16" id="UnF-qv-cL5"/>
+                            <constraint firstItem="35O-RP-25e" firstAttribute="leading" secondItem="TuJ-l0-QoO" secondAttribute="leading" constant="16" id="bm4-hG-JPo"/>
+                            <constraint firstItem="TuJ-l0-QoO" firstAttribute="trailing" secondItem="c0t-29-6Z7" secondAttribute="trailing" constant="123.5" id="dOm-ge-BLx"/>
+                            <constraint firstItem="c0t-29-6Z7" firstAttribute="centerX" secondItem="TuJ-l0-QoO" secondAttribute="centerX" id="h2K-90-aFT"/>
+                            <constraint firstItem="TuJ-l0-QoO" firstAttribute="trailing" secondItem="IIv-IB-f43" secondAttribute="trailing" constant="16" id="tT4-gJ-XAe"/>
+                            <constraint firstItem="TuJ-l0-QoO" firstAttribute="trailing" secondItem="35O-RP-25e" secondAttribute="trailing" constant="16" id="wPA-sE-l3G"/>
+                            <constraint firstItem="IIv-IB-f43" firstAttribute="top" secondItem="c0t-29-6Z7" secondAttribute="bottom" constant="16" id="wPb-q0-Nhc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TuJ-l0-QoO"/>
                     </view>
@@ -177,7 +193,6 @@
         <!--Navigation Controller-->
         <scene sceneID="hJh-60-aoM">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EXw-c0-fvs" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H2f-hA-j1p" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pGL-20-swO">
@@ -189,6 +204,7 @@
                         <segue destination="CxI-25-SdC" kind="relationship" relationship="rootViewController" id="a3u-xk-zTG"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EXw-c0-fvs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3362" y="-1245"/>
         </scene>

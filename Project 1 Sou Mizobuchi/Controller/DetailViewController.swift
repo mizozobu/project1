@@ -22,6 +22,19 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var homeContact: UILabel!
     @IBOutlet weak var workContact: UILabel!
     
+    // Mark - Actions
+    @IBAction func makeCall(_ sender: Any) {
+        if let number = URL(string: "tel://\(currentPerson!.phone)") {
+            UIApplication.shared.open(number)
+        }
+    }
+    
+    @IBAction func writeEmail(_ sender: Any) {
+        if let email = URL(string: "mailto:\(currentPerson!.email)") {
+            UIApplication.shared.open(email)
+        }
+    }
+    
     // Mark - Properties
     var uid: String?
     var currentPerson: Person?
