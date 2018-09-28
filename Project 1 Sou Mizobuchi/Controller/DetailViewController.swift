@@ -24,8 +24,10 @@ class DetailViewController: UIViewController {
     
     // Mark - Actions
     @IBAction func makeCall(_ sender: Any) {
-        if let number = URL(string: "tel://\(currentPerson!.phone)") {
+        let phoneNumber = currentPerson!.phone.replacingOccurrences(of: "-", with: "")
+        if let number = URL(string: "tel://\(phoneNumber)") {
             UIApplication.shared.open(number)
+            print(number)
         }
     }
     
