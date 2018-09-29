@@ -267,6 +267,9 @@
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Upload"/>
+                                        <connections>
+                                            <action selector="uploadImage:" destination="Wsl-gM-WH4" eventType="touchUpInside" id="S7k-27-CSv"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T21-at-uLL">
                                         <rect key="frame" x="175.5" y="0.0" width="167.5" height="30"/>
@@ -437,6 +440,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="d0A-9g-NQH"/>
         <segue reference="79Q-Uo-fua"/>
     </inferredMetricsTieBreakers>
 </document>

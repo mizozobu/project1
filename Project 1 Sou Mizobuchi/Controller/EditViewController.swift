@@ -9,7 +9,7 @@
 import UIKit
 import MessageUI
 
-class EditViewController: UIViewController {
+class EditViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     // Mark - Outlets
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var firstName: UITextField!
@@ -26,16 +26,24 @@ class EditViewController: UIViewController {
     @IBOutlet weak var workContact: UITextField!
     
     // Mark - Actions
+    @IBAction func uploadImage(_ sender: Any) {
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .photoLibrary
+        
+        present(imagePicker, animated: true, completion: nil)
+    }
     
     // Mark - Properties
     var uid: String?
     var currentPerson: Person?
+    let imagePicker = UIImagePickerController()
     
     // Mark - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         findPerson()
         updateUI()
+        imagePicker.delegate = self
     }
     
     // Mark - life cycle
@@ -67,9 +75,14 @@ class EditViewController: UIViewController {
         workContact.text = currentPerson!.workContact
     }
     
-    // Mark - Segue
-    @IBAction func showContactDetail(_ segue: UIStoryboardSegue) {
-        //??
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            //image.contentMode = .scaleAspectFit
+            image.image = pickedImage
+        }
+        print("new image")
+        
+        dismiss(animated: true, completion: nil)
     }
 }
 

@@ -97,9 +97,4 @@ class DetailViewController: UIViewController {
         profile.contentMode = .scaleToFill
         profile.numberOfLines = 0
     }
-    
-    // Mark - Segue
-    @IBAction func showContactDetail(_ segue: UIStoryboardSegue) {
-        //??
-    }
 }
