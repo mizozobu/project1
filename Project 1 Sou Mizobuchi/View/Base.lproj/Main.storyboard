@@ -260,10 +260,10 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="G8B-PF-hmD">
-                                <rect key="frame" x="16" y="184" width="343" height="30"/>
+                                <rect key="frame" x="16" y="184" width="343" height="72"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2B-Zb-zJv">
-                                        <rect key="frame" x="0.0" y="0.0" width="167.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="21" width="167.5" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Upload"/>
@@ -272,15 +272,18 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T21-at-uLL">
-                                        <rect key="frame" x="175.5" y="0.0" width="167.5" height="30"/>
+                                        <rect key="frame" x="175.5" y="21" width="167.5" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Take Photo"/>
+                                        <connections>
+                                            <action selector="takePhoto:" destination="Wsl-gM-WH4" eventType="touchUpInside" id="IK9-D7-8dE"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nyv-bw-haf">
-                                <rect key="frame" x="16" y="228" width="343" height="400"/>
+                                <rect key="frame" x="16" y="270" width="343" height="358"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pDt-lL-czh">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
@@ -387,7 +390,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HlM-d6-T7Q">
-                                        <rect key="frame" x="0.0" y="272" width="343" height="128"/>
+                                        <rect key="frame" x="0.0" y="272" width="343" height="86"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -414,7 +417,12 @@
                     <navigationItem key="navigationItem" id="nHz-2e-mUE">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="bNP-QX-bUQ">
                             <connections>
-                                <segue destination="ksj-uM-Q7q" kind="show" id="79Q-Uo-fua"/>
+                                <segue destination="ksj-uM-Q7q" kind="show" identifier="" id="79Q-Uo-fua"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="IkG-Pp-2oD">
+                            <connections>
+                                <action selector="save:" destination="Wsl-gM-WH4" id="Sxp-gv-2bU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -440,7 +448,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="d0A-9g-NQH"/>
         <segue reference="79Q-Uo-fua"/>
     </inferredMetricsTieBreakers>
 </document>

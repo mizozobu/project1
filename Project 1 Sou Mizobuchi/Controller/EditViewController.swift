@@ -33,6 +33,19 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         present(imagePicker, animated: true, completion: nil)
     }
     
+    // see https://stackoverflow.com/questions/40854886/swift-take-a-photo-and-save-to-photo-library
+    @IBAction func takePhoto(_ sender: Any) {
+        imagePicker.delegate = self
+        imagePicker.sourceType = .camera
+        
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    @IBAction func save(_ sender: Any) {
+        // save inputs to Person model
+        // what do i do?
+    }
+    
     // Mark - Properties
     var uid: String?
     var currentPerson: Person?
@@ -75,6 +88,7 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         workContact.text = currentPerson!.workContact
     }
     
+    // Mark - Image Picker
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             //image.contentMode = .scaleAspectFit
@@ -82,6 +96,10 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         }
         print("new image")
         
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
 }
