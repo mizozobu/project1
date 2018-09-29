@@ -22,6 +22,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var status: UILabel!
     @IBOutlet weak var homeContact: UILabel!
     @IBOutlet weak var workContact: UILabel!
+    @IBOutlet weak var editBtn: UIBarButtonItem!
     
     // Mark - Actions
     @IBAction func makeCall(_ sender: Any) {
@@ -53,7 +54,7 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         findPerson()
-        enableEdit()
+        disableEdit()
         self.title = currentPerson!.getFullName()
         updateUI()
     }
@@ -63,17 +64,13 @@ class DetailViewController: UIViewController {
         currentPerson = PersonDeck.people.first(where: { $0.email == uid })
     }
     
-    private func enableEdit() {
+    private func disableEdit() {
         if uid == "chewie@gmail.com" {
-            let editBtn = UIButton(type: .custom)
-            //editBtn.setImage(UIImage(named: "founder1.png"), for: .normal)
-            editBtn.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-            //editBtn.addTarget(self, action: #selector(Class.Methodname), for: .touchUpInside)
-            editBtn.setTitle("Edit", for: [])
-            let item1 = UIBarButtonItem(customView: editBtn)
-            item1.title = "Edit"
-            
-            self.navigationItem.setRightBarButtonItems([item1], animated: false)
+            print("hide")
+            editBtn.isEnabled = true
+        }
+        else {
+            editBtn.isEnabled = false
         }
     }
     
