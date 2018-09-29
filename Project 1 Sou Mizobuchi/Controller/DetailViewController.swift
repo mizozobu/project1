@@ -59,6 +59,13 @@ class DetailViewController: UIViewController {
         updateUI()
     }
     
+    // Mark - life cycle
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let editViewController = segue.destination as? EditViewController {
+            editViewController.uid = uid
+        }
+    }
+    
     // Mark - Helper
     private func findPerson() {
         currentPerson = PersonDeck.people.first(where: { $0.email == uid })
