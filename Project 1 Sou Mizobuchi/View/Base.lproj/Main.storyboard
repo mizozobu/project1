@@ -316,6 +316,9 @@
                                             </textField>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kq2-eE-12A">
                                                 <rect key="frame" x="294" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleHideMyPhone:" destination="Wsl-gM-WH4" eventType="valueChanged" id="w9p-J9-bdr"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                         <constraints>
@@ -333,6 +336,9 @@
                                             </textField>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H8w-Kj-6b3">
                                                 <rect key="frame" x="294" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleHideMyEmail:" destination="Wsl-gM-WH4" eventType="valueChanged" id="JlS-xW-xX2"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                         <constraints>
@@ -423,6 +429,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="IkG-Pp-2oD">
                             <connections>
                                 <action selector="save:" destination="Wsl-gM-WH4" id="Sxp-gv-2bU"/>
+                                <segue destination="ksj-uM-Q7q" kind="show" id="0Jc-HO-VCy"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -430,6 +437,8 @@
                         <outlet property="company" destination="WdF-g3-dcD" id="Ysw-to-CLp"/>
                         <outlet property="email" destination="tPG-0z-FN6" id="i73-um-g0M"/>
                         <outlet property="firstName" destination="YSM-LZ-IkB" id="9ab-5t-FF3"/>
+                        <outlet property="hideMyEmail" destination="H8w-Kj-6b3" id="zQm-kj-kj0"/>
+                        <outlet property="hideMyPhone" destination="kq2-eE-12A" id="6R0-vv-EWs"/>
                         <outlet property="homeContact" destination="0KR-h9-IfN" id="paY-hR-2Mu"/>
                         <outlet property="image" destination="HIa-wT-KZW" id="Xdn-Wh-uvB"/>
                         <outlet property="lastName" destination="rtO-uW-4nI" id="M11-D8-HPG"/>

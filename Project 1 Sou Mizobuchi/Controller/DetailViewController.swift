@@ -29,7 +29,6 @@ class DetailViewController: UIViewController {
         let phoneNumber = currentPerson!.phone.replacingOccurrences(of: "-", with: "")
         if let number = URL(string: "tel://\(phoneNumber)") {
             UIApplication.shared.open(number)
-            print(number)
         }
     }
     
@@ -49,6 +48,9 @@ class DetailViewController: UIViewController {
     // Mark - Properties
     var uid: String?
     var currentPerson: Person?
+    static var hideMyEmail: Bool? = false
+    static var hideMyPhone: Bool? = false
+    
     
     // Mark - Life Cycle
     override func viewDidLoad() {
@@ -71,9 +73,9 @@ class DetailViewController: UIViewController {
         currentPerson = PersonDeck.people.first(where: { $0.email == uid })
     }
     
+    // FIXME change uid to my email or id if available
     private func disableEdit() {
         if uid == "chewie@gmail.com" {
-            print("hide")
             editBtn.isEnabled = true
         }
         else {
@@ -96,5 +98,12 @@ class DetailViewController: UIViewController {
         
         profile.contentMode = .scaleToFill
         profile.numberOfLines = 0
+        
+        if (!DetailViewController.hideMyPhone!) {
+            phone.text = "Private"
+        }
+        if (!DetailViewController.hideMyEmail!) {
+            email.text = "Private"
+        }
     }
 }

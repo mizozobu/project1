@@ -31,7 +31,7 @@ class ContactsViewController: UITableViewController {
         return cell
     }
     
-    // Mark - life cycle
+    // Mark - Life Cycle
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let navController = segue.destination as? UINavigationController {
             if let detailViewController = navController.viewControllers.first as? DetailViewController {
@@ -40,7 +40,7 @@ class ContactsViewController: UITableViewController {
         }
     }
     
-    // Mark - delegate
+    // Mark - Delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedContactEmail = PersonDeck.people[indexPath.row].email
         performSegue(withIdentifier: Storyboard.ShowDetailSegueIdentifier, sender: self)

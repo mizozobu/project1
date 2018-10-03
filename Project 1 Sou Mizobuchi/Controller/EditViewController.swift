@@ -24,6 +24,8 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var yearJoined: UITextField!
     @IBOutlet weak var homeContact: UITextField!
     @IBOutlet weak var workContact: UITextField!
+    @IBOutlet weak var hideMyPhone: UISwitch!
+    @IBOutlet weak var hideMyEmail: UISwitch!
     
     // Mark - Actions
     @IBAction func uploadImage(_ sender: Any) {
@@ -33,12 +35,21 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         present(imagePicker, animated: true, completion: nil)
     }
     
+    // take photo
     // see https://stackoverflow.com/questions/40854886/swift-take-a-photo-and-save-to-photo-library
     @IBAction func takePhoto(_ sender: Any) {
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
         
         present(imagePicker, animated: true, completion: nil)
+    }
+    
+    @IBAction func toggleHideMyPhone(_ sender: UISwitch) {
+        DetailViewController.hideMyPhone = sender.isOn
+    }
+    
+    @IBAction func toggleHideMyEmail(_ sender: UISwitch) {
+        DetailViewController.hideMyEmail = sender.isOn
     }
     
     @IBAction func save(_ sender: Any) {
@@ -86,15 +97,17 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         status.text = currentPerson!.status
         homeContact.text = currentPerson!.homeContact
         workContact.text = currentPerson!.workContact
+        hideMyPhone.setOn(DetailViewController.hideMyPhone!, animated: true)
+        hideMyEmail.setOn(DetailViewController.hideMyEmail!, animated: true)
     }
     
     // Mark - Image Picker
+    // upload photo
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             //image.contentMode = .scaleAspectFit
             image.image = pickedImage
         }
-        print("new image")
         
         dismiss(animated: true, completion: nil)
     }
