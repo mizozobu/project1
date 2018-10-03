@@ -48,6 +48,7 @@ class DetailViewController: UIViewController {
     // Mark - Properties
     var uid: String?
     var currentPerson: Person?
+    // FIXME move these two variables to from person object
     static var hideMyEmail: Bool? = false
     static var hideMyPhone: Bool? = false
     
