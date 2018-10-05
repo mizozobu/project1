@@ -280,6 +280,7 @@
                             <constraint firstItem="c0t-29-6Z7" firstAttribute="leading" secondItem="TuJ-l0-QoO" secondAttribute="leading" constant="123.5" id="5fC-p7-uvP"/>
                             <constraint firstItem="3nb-Nt-qYX" firstAttribute="top" secondItem="IIv-IB-f43" secondAttribute="bottom" constant="8" symbolic="YES" id="B5L-4Z-ecZ"/>
                             <constraint firstItem="3nb-Nt-qYX" firstAttribute="bottom" secondItem="TuJ-l0-QoO" secondAttribute="bottom" id="DGC-Om-Oxf"/>
+                            <constraint firstItem="TuJ-l0-QoO" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rhN-qJ-OTh" secondAttribute="trailing" constant="16" id="TC7-wS-Adl"/>
                             <constraint firstItem="c0t-29-6Z7" firstAttribute="top" secondItem="TuJ-l0-QoO" secondAttribute="top" constant="20" id="UAX-KS-Dzf"/>
                             <constraint firstItem="IIv-IB-f43" firstAttribute="leading" secondItem="TuJ-l0-QoO" secondAttribute="leading" constant="16" id="UnF-qv-cL5"/>
                             <constraint firstItem="TuJ-l0-QoO" firstAttribute="trailing" secondItem="c0t-29-6Z7" secondAttribute="trailing" constant="123.5" id="dOm-ge-BLx"/>
@@ -575,7 +576,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="d0A-9g-NQH"/>
         <segue reference="79Q-Uo-fua"/>
     </inferredMetricsTieBreakers>
 </document>
